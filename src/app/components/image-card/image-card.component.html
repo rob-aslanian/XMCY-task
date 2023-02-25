@@ -1,0 +1,14 @@
+<mat-card
+  data-testid="image-card"
+  class="image-card"
+  (click)="onImageClicked($event)"
+>
+  <ng-container *ngIf="imageSrc$ | withState | async as imageObs">
+    <img
+      *ngIf="$any(imageObs).value as imageSrc"
+      mat-card-image
+      [src]="imageSrc"
+    />
+    <mat-spinner *ngIf="$any(imageObs).loading"></mat-spinner>
+  </ng-container>
+</mat-card>

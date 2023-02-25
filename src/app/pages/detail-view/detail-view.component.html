@@ -1,0 +1,12 @@
+<div class="detail-view-container">
+  <app-image-card [id]="id" [imageSrc$]="image"></app-image-card>
+  <button
+    data-testid="remove-image-btn"
+    mat-button
+    mat-raised-button
+    color="warn"
+    (click)="onRemoveImage()"
+  >
+    Remove from favorites
+  </button>
+</div>

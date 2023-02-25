@@ -1,0 +1,24 @@
+<mat-toolbar>
+  <nav class="nav-wrapper">
+    <button
+      data-testid="photos-btn"
+      mat-button
+      color="accent"
+      routerLink="/"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Photos
+    </button>
+    <button
+      data-testid="favorites-btn"
+      mat-button
+      color="warn"
+      routerLink="/favorites"
+      [matBadge]="imageLocalStorageService.favoriteAmount$() | async"
+      routerLinkActive="active-link"
+    >
+      Favorites
+    </button>
+  </nav>
+</mat-toolbar>

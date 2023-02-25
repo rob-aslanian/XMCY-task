@@ -1,0 +1,5 @@
+<app-infinity-scroll (scrolled)="onScrolled($event)">
+  <app-image-list [imagesData]="images" (imageClicked)="onImageClicked($event)">
+  </app-image-list>
+</app-infinity-scroll>
+<mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>

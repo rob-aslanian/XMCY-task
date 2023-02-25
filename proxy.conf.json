@@ -1,0 +1,8 @@
+{
+  "/images/*": {
+    "target": "https://picsum.photos",
+    "changeOrigin": true,
+    "pathRewrite": { "^/images": "" },
+    "secure": false
+  }
+}

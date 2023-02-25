@@ -1,0 +1,14 @@
+<mat-grid-list class="image-list" cols="3" rowHeight="2:1" gutterSize="20">
+  <ng-container *ngIf="!imagesData?.length">
+    <h1>No favorites images</h1>
+  </ng-container>
+
+  <mat-grid-tile *ngFor="let imageData of imagesData; trackBy: trackByFn">
+    <app-image-card
+      [id]="imageData.id"
+      [imageSrc$]="imageData.src$"
+      (imageClicked)="imageClicked.emit($event)"
+    ></app-image-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<ng-content></ng-content>

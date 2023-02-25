@@ -1,0 +1,14 @@
+.nav-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button:first-child {
+    margin-right: 20px;
+  }
+
+  button.active-link {
+    background: #cccccc;
+    color: #000000;
+  }
+}
